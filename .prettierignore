@@ -28,3 +28,4 @@ lcov.info
 *.txt
 .idea
 bun.lock
+foundry.lock
