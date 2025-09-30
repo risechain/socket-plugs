@@ -73,7 +73,9 @@ export const setHookInBridge = async (
 ) => {
   let storedHookAddress = getDryRun()
     ? AddressZero
-    : await bridgeContract.hook__();
+    : await bridgeContract.hook__({
+        gasLimit: 1000000,
+      });
   if (storedHookAddress === hookContract.address) {
     console.log(`✔   Hook already set on Bridge for chain ${chain}`);
     return;

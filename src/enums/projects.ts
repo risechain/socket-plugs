@@ -21,4 +21,5 @@ export enum Project {
   MAGIC_MAINNET = "magic_mainnet",
   POLTER_TESTNET = "polter_testnet",
   B3_MAINNET = "b3_mainnet",
+  RISE_SEPOLIA_BRIDGE_TESTNET = "rise_sepolia_bridge_testnet",
 }

@@ -27,3 +27,4 @@ lcov.info
 *.toml
 *.txt
 .idea
+bun.lock

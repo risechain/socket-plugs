@@ -26,5 +26,49 @@
         }
       }
     }
+  },
+  "rise_sepolia_bridge_testnet": {
+    "421614": {
+      "USDC": {
+        "isAppChain": false,
+        "NonMintableToken": "0x8537307810fC40F4073A12a38554D4Ff78EfFf41",
+        "Vault": "0x068437D461287e402Ec400CC26ef0B0eFD7e6ED9",
+        "LimitHook": "0xb0Aed66010079DC93AA41C41F591f08f1B079f74",
+        "connectors": {
+          "11155931": {
+            "FAST": "0x9F58c59A505CCd5C5722bef5a53171C43fD4ddB1"
+          }
+        }
+      }
+    },
+    "11155420": {
+      "USDC": {
+        "isAppChain": false,
+        "NonMintableToken": "0x6D290609b3F5F02D52F28d97C75a443ED8564cBf",
+        "Vault": "0x37EfDdd52438199Db56340581642B25A159a3561",
+        "LimitHook": "0xc524F564E9Ff8eA026e3afe1c874916edeF1C4E4",
+        "connectors": {
+          "11155931": {
+            "FAST": "0x310EB2B6C941dC8f8BA78744D5c992ad4eFB0005"
+          }
+        }
+      }
+    },
+    "11155931": {
+      "USDC": {
+        "isAppChain": true,
+        "MintableToken": "0x549984c0f5117244605F8A5AE5d9fA71D162d643",
+        "Controller": "0x216c19D9B8325F9620763129c01e2f6dc624Ffc6",
+        "LimitHook": "0x10e0355B1bA5B341fAB8732fDbCf064f84E3E006",
+        "connectors": {
+          "421614": {
+            "FAST": "0x068437D461287e402Ec400CC26ef0B0eFD7e6ED9"
+          },
+          "11155420": {
+            "FAST": "0xb0Aed66010079DC93AA41C41F591f08f1B079f74"
+          }
+        }
+      }
+    }
   }
 }

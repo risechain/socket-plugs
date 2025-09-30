@@ -23,6 +23,11 @@ export const type = 2;
 export const overrides: {
   [chain: number]: Overrides;
 } = {
+  [11155931]: {
+    type: 0,
+    gasLimit: undefined,
+    gasPrice: 10,
+  },
   [ChainSlug.ARBITRUM_SEPOLIA]: {
     type,
     // gasLimit: 20_000_000,

@@ -57,7 +57,9 @@ export const updateConnectorStatus = async (
 
       let currentConnectorStatus = getDryRun()
         ? false
-        : await bridgeContract.callStatic.validConnectors(itConnectorAddress);
+        : await bridgeContract.callStatic.validConnectors(itConnectorAddress, {
+            gasLimit: 1000000,
+          });
       if (currentConnectorStatus !== newConnectorStatus) {
         connectorAddresses.push(itConnectorAddress);
       }
@@ -290,12 +292,16 @@ export const updateLimitsAndPoolId = async (
       // console.log({ itConnectorAddress });
       let sendingParams = getDryRun()
         ? {}
-        : await hookContract.getSendingLimitParams(itConnectorAddress);
+        : await hookContract.getSendingLimitParams(itConnectorAddress, {
+            gasLimit: 1000000,
+          });
 
       // console.log({ sendingParams });
       let receivingParams = getDryRun()
         ? {}
-        : await hookContract.getReceivingLimitParams(itConnectorAddress);
+        : await hookContract.getReceivingLimitParams(itConnectorAddress, {
+            gasLimit: 1000000,
+          });
 
       // mint/lock/deposit limits
       const sendingLimit = getLimitBN(it, chain, token, true);
@@ -345,7 +351,9 @@ export const updateLimitsAndPoolId = async (
       ) {
         const poolId: BigNumber = getDryRun()
           ? BigNumber.from(0)
-          : await hookContract.connectorPoolIds(itConnectorAddress);
+          : await hookContract.connectorPoolIds(itConnectorAddress, {
+              gasLimit: 1000000,
+            });
         // console.log({ itConnectorAddress, poolId });
         const poolIdHex =
           "0x" + BigInt(poolId.toString()).toString(16).padStart(64, "0");

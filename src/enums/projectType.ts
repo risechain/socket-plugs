@@ -24,4 +24,5 @@ export const ProjectTypeMap: Record<Project, ProjectType> = {
   [Project.MAGIC_MAINNET]: ProjectType.SUPERTOKEN,
   [Project.POLTER_TESTNET]: ProjectType.SUPERBRIDGE,
   [Project.B3_MAINNET]: ProjectType.SUPERBRIDGE,
+  [Project.RISE_SEPOLIA_BRIDGE_TESTNET]: ProjectType.SUPERBRIDGE,
 };
